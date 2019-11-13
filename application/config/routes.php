@@ -61,4 +61,5 @@ $route['translate_uri_dashes'] = true;
 
 $route['scoreList']['GET'] = 'api/home/scoreList';
 $route['scoreAvg']['GET'] = 'api/home/scoreAvg';
-$route['addScore']['POST'] = 'api/home/addScore';
+// $route['addScore']['POST'] = 'api/home/addScore';
+$route['addScore/(:num)']['GET'] = 'api/home/addScore/$1';

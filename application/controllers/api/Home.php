@@ -47,9 +47,9 @@ class Home extends CI_Controller
     $this->response($result, 200);
   }
 
-  public function addScore_post()
+  public function addScore_get($score)
   {
-    $score = $this->post('score');
+    // $score = $this->get('score');
 
     $this->M_api->addScore($score);
 
