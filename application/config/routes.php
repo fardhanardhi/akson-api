@@ -60,6 +60,12 @@ $route['translate_uri_dashes'] = true;
 */
 
 $route['scoreList']['GET'] = 'api/home/scoreList';
-$route['scoreAvg']['GET'] = 'api/home/scoreAvg';
+$route['scoreList/(:num)']['GET'] = 'api/home/scoreListByUser/$1';
+$route['globalScoreAvg/(:num)']['GET'] = 'api/home/globalScoreAvg/$1';
+$route['userScoreAvg/(:num)']['GET'] = 'api/home/userScoreAvg/$1';
 // $route['addScore']['POST'] = 'api/home/addScore';
-$route['addScore/(:num)']['GET'] = 'api/home/addScore/$1';
+$route['addScore/(:num)/(:num)/(:num)']['GET'] = 'api/home/addScore/$1/$2/$3';
+$route['checkUser/(:any)']['GET'] = 'api/home/checkUser/$1';
+$route['user']['GET'] = 'api/home/user';
+$route['createUser/(:any)/(:num)']['GET'] = 'api/home/createUser/$1/$2';
+$route['updateAge/(:num)/(:num)']['GET'] = 'api/home/updateAge/$1/$2';
